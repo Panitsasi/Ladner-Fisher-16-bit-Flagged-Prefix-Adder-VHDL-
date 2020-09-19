@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+
+    entity propagate_generate is 
+
+      port(
+       
+        A,B:in   std_logic;
+        P,G:out   std_logic
+     
+       );
+
+      end propagate_generate;
+
+
+
+ architecture arch_propagate_generate of propagate_generate is
+           
+	begin
+	
+	G<= A and B ;
+	P<=A xor B ;
+
+		
+	end arch_propagate_generate;

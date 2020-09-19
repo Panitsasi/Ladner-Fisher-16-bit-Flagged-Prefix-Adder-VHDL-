@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+
+    entity cell_input2 is 
+
+      port(
+       
+        g1,g2,p1,p2:in   std_logic;
+        P_block2,G_block2:out   std_logic
+     
+       );
+
+      end cell_input2;
+
+
+
+ architecture arch_cell_input2 of cell_input2 is
+           
+	begin
+
+
+        P_block2<=p1 and p2 ;
+        G_block2<=g2 or (p2 and g1 ) ;
+	
+	
+
+		
+	end arch_cell_input2;
